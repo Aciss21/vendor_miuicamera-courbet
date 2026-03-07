@@ -1,6 +1,6 @@
-#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#!/usr/bin/env -S PYTHONPATH=../../tools/extract-utils python3
 #
-# SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+# SPDX-FileCopyrightText: 2024-2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/miuicamera-sweet',
+    'vendor/miuicamera-sweet',
 ]
 
 
@@ -43,8 +43,9 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'miuicamera-sweet',
     'xiaomi',
+    'miuicamera-sweet',
+    device_rel_path='vendor/miuicamera-sweet',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

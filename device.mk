@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2023-2025 The LineageOS Project
+# Copyright (C) 2023-2026 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/miuicamera-sweet/miuicamera-sweet-vendor.mk)
+$(call inherit-product, vendor/miuicamera-sweet/xiaomi/xiaomi-vendor.mk)
 
 # Priv-app permission
 PRODUCT_COPY_FILES += \
