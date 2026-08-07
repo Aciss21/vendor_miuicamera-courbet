@@ -11,3 +11,28 @@ PRODUCT_PACKAGES += \
     libmicampostproc_client \
     vendor.xiaomi.hardware.campostproc@1.0 \
     MiuiCamera
+
+ifeq ($(strip $(TARGET_USES_STOCK_MIUICAMERA)),true)
+    $(warning Building with Stock MiuiCamera)
+    PRODUCT_PACKAGES += MiuiCamera
+endif
+
+ifeq ($(strip $(TARGET_USES_LEICA_HOLY45)),true)
+    $(warning Building with Leica Camera Holy 4.5)
+    PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_4_5
+endif
+
+# Leica Camera Holy 5.0
+ifeq ($(strip $(TARGET_USES_LEICA_HOLY50)),true)
+    $(warning Building with Leica Camera Holy 5.0)
+    PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_5_0
+endif
+
+# Fallback
+ifneq ($(or \
+    $(TARGET_USES_STOCK_MIUICAMERA), \
+    $(TARGET_USES_LEICA_HOLY45), \
+    $(TARGET_USES_LEICA_HOLY50)),true)
+    $(warning No TARGET_USES_* camera flag set — defaulting to Stock MiuiCamera)
+    PRODUCT_PACKAGES += MiuiCamera
+endif
