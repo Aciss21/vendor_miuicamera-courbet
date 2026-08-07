@@ -5,7 +5,7 @@
 #
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/miuicamera-sweet/xiaomi/xiaomi-vendor.mk)
+$(call inherit-product, vendor/miuicamera-courbet/xiaomi/xiaomi-vendor.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
