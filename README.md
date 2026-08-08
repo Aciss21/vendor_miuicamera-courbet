@@ -3,6 +3,8 @@
 This project supports multiple MiuiCamera variants. You can choose which one to build
 by setting a flag in your **lineage_courbet.mk**.
 
+# ⚠️ Warning leica variant Holy 5.0 is experimental
+
 ## Available Variants
 
 | Flag                          | Camera Variant Name                  |
