@@ -9,8 +9,7 @@ PRODUCT_PACKAGES += \
     libcamera_algoup_jni.xiaomi \
     libcamera_mianode_jni.xiaomi \
     libmicampostproc_client \
-    vendor.xiaomi.hardware.campostproc@1.0 \
-    MiuiCamera
+    vendor.xiaomi.hardware.campostproc@1.0
 
 ifeq ($(strip $(TARGET_USES_STOCK_MIUICAMERA)),true)
     $(warning Building with Stock MiuiCamera)
