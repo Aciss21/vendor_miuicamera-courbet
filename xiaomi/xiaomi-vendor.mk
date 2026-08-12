@@ -14,7 +14,7 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(strip $(TARGET_USES_STOCK_MIUICAMERA)),true)
     $(warning Building with Stock MiuiCamera)
-    PRODUCT_PACKAGES += MiuiCamera
+    PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_4_5
 endif
 
 ifeq ($(strip $(TARGET_USES_LEICA_HOLY45)),true)
@@ -22,17 +22,10 @@ ifeq ($(strip $(TARGET_USES_LEICA_HOLY45)),true)
     PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_4_5
 endif
 
-# Leica Camera Holy 5.0
-ifeq ($(strip $(TARGET_USES_LEICA_HOLY50)),true)
-    $(warning Building with Leica Camera Holy 5.0)
-    PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_5_0
-endif
-
 # Fallback
 ifneq ($(or \
     $(TARGET_USES_STOCK_MIUICAMERA), \
     $(TARGET_USES_LEICA_HOLY45), \
-    $(TARGET_USES_LEICA_HOLY50)),true)
-    $(warning No TARGET_USES_* camera flag set — defaulting to Stock MiuiCamera)
-    PRODUCT_PACKAGES += MiuiCamera
+    $(warning No TARGET_USES_* camera flag set — defaulting to Leica Camera)
+    PRODUCT_PACKAGES += MiuiCamera_Leica_Holy_4_5
 endif
