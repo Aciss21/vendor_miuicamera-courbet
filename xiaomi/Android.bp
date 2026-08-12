@@ -181,20 +181,3 @@ android_app_import {
     },
     privileged: true,
 }
-
-android_app_import {
-    name: "MiuiCamera_Leica_Holy_5_0",
-    owner: "miuicamera-courbet",
-    apk: "proprietary/system/priv-app/MiuiCamera_Leica_Holy_5_0/MiuiCamera.apk",
-    overrides: [
-        "Aperture",
-        "Snap",
-        "Camera2",
-        "GoogleCameraGo",
-    ],
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-}
